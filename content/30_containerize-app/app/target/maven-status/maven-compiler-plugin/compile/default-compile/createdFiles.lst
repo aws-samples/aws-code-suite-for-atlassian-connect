@@ -1,0 +1,17 @@
+com/atlassian/jira/jsw/sample/dataprovider/ProxyController.class
+com/atlassian/jira/jsw/sample/dataprovider/WebSecurityEntryPoint.class
+com/atlassian/jira/jsw/sample/dataprovider/HttpCommonOperations.class
+com/atlassian/jira/jsw/sample/dataprovider/RelayDeploymentsController.class
+com/atlassian/jira/jsw/sample/dataprovider/RetrofitFactory.class
+com/atlassian/jira/jsw/sample/dataprovider/JwtInterceptor.class
+com/atlassian/jira/jsw/sample/dataprovider/WhitelistService.class
+com/atlassian/jira/jsw/sample/dataprovider/JwtMyselfController.class
+com/atlassian/jira/jsw/sample/dataprovider/RelayFeatureflagsController.class
+com/atlassian/jira/jsw/sample/dataprovider/AddonApplication.class
+com/atlassian/jira/jsw/sample/dataprovider/Utils.class
+com/atlassian/jira/jsw/sample/dataprovider/OkHttpClientFactory.class
+com/atlassian/jira/jsw/sample/dataprovider/MyselfClient.class
+com/atlassian/jira/jsw/sample/dataprovider/OAuth2MyselfController.class
+com/atlassian/jira/jsw/sample/dataprovider/WebSecurityConfiguration.class
+com/atlassian/jira/jsw/sample/dataprovider/OAuth2Interceptor.class
+com/atlassian/jira/jsw/sample/dataprovider/User.class
