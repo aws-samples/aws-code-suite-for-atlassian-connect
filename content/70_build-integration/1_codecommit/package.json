@@ -1,0 +1,14 @@
+{
+  "name": "getcommitid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "author": "",
+  "license": "Apache-2.0"
+}
