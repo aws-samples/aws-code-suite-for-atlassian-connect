@@ -7,13 +7,22 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.4.RELEASE</version>
+        <version>1.5.20.RELEASE</version>
         <relativePath></relativePath>
     </parent>
 
     <groupId>com.atlassian.jira.jsw</groupId>
-    <artifactId>jira-data-provider-sample-addon</artifactId>
+    <artifactId>jira-data-provider-aws-sample-addon</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <atlassian-connect-spring-boot.version>1.5.1</atlassian-connect-spring-boot.version>
+        <spring-security-oauth.version>2.3.5.RELEASE</spring-security-oauth.version>
+        <retrofit.version>2.5.0</retrofit.version>
+    </properties>
 
     <dependencies>  
         <dependency>
@@ -94,14 +103,4 @@
             </dependencies>
         </profile>
     </profiles>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-
-        <atlassian-connect-spring-boot.version>1.4.3</atlassian-connect-spring-boot.version>
-        <retrofit.version>2.4.0</retrofit.version>
-    </properties>
-
 </project>
