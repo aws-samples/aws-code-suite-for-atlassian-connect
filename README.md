@@ -1,4 +1,4 @@
-[![Known Vulnerabilities](https://snyk.io/test/github/aws-samples/aws-code-suite-for-atlassian-connect/badge.svg?targetFile=/content/30_containerize-app/app/pom.xml)](https://snyk.io/test/github/aws-samples/aws-code-suite-for-atlassian-connect)
+[![Known Vulnerabilities](https://snyk.io/test/github/aws-samples/aws-code-suite-for-atlassian-connect/badge.svg?targetFile=/content/30_containerize-app/app/pom.xml)](https://snyk.io/test/github/aws-samples/aws-code-suite-for-atlassian-connect?targetFile=/content/30_containerize-app/app/pom.xml)
 
 # AWS Code Suite & Atlassian Connect
 

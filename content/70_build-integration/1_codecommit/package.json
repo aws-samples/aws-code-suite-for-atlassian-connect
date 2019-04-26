@@ -1,14 +1,15 @@
 {
   "name": "getcommitid",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample Code for AWS CodeCommit API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "time-stamp": "^2.2.0"
   },
-  "author": "",
+  "author": "Jay Yeras",
   "license": "Apache-2.0"
 }

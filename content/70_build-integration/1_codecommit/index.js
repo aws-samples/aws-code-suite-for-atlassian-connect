@@ -1,8 +1,11 @@
 console.log('Starting getCommitId...');
 
 const AWS = require('aws-sdk');
-const codecommit = new AWS.CodeCommit({ apiVersion: '2015-04-13' });
+const codecommit = new AWS.CodeCommit({ 
+    apiVersion: '2015-04-13' 
+});
 const request = require('request');
+const timestamp = require('time-stamp');
 const baseURL = process.env.BASE_URL
 
 exports.handler = function(event, context) {
@@ -28,19 +31,31 @@ exports.handler = function(event, context) {
                 var authorName = data.commit.author.name;
                 var authorEmail = data.commit.author.email;
                 var authorTimestamp = data.commit.author.date;
+                var updateSequenceId = timestamp.utc('YYYYMMDDHHmmssms');
+                var urlRepo = null;
+                var issueKeys = 1;
+                var fileCount = 1;
                 var responseBody = JSON.stringify({
                     repositories: [
                         {
                             name: repository,
+                            url: urlRepo,
+                            id: commitId,
                             commits: [
                                 {
                                     id: commitId,
+                                    issueKeys: issueKeys,
+                                    updateSequenceId: updateSequenceId,
+                                    hash: commitId,
                                     message: commitMessage,
                                     author: {
                                         name: authorName,
                                         email: authorEmail
                                     },
-                                    authorTimestamp: authorTimestamp
+                                    fileCount: fileCount,
+                                    url: urlRepo,
+                                    authorTimestamp: authorTimestamp,
+                                    displayId: commitId
                                 }
                             ]
                         }
@@ -51,7 +66,7 @@ exports.handler = function(event, context) {
         
                 var send = {
                    method: 'POST',
-                   url: baseURL,
+                   uri: baseURL,
                    headers: {
                       'Accept': 'application/json',
                       'Content-Type': 'application/json'
