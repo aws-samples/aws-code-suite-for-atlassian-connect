@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  LambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs8.10
+      Policies:
+      - Statement:
+        - Sid: CreateCloudWatchLogsPolicy
+          Effect: Allow
+          Action:
+          - logs:CreateLogGroup
+          - logs:CreateLogStream
+          - logs:PutLogEvents        
+          Resource: '*'
+        - Sid: DescribeCodePipelinePolicy
+          Effect: Allow
+          Action:
+          - codepipeline:ListPipelineExecutions
+          - codepipeline:ListPipelines
+          - codepipeline:GetPipeline
+          - codepipeline:GetPipelineState
+          - codepipeline:GetJobDetails
+          - codepipeline:GetPipelineExecution
+          - codepipeline:ListActionTypes
+          Resource: '*'            

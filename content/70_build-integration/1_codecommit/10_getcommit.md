@@ -6,7 +6,9 @@ weight = 10
 
 ## Reviewing the function
 
-Our AWS Lambda function is written in [Node.js](https://nodejs.org/dist/latest-v11.x/docs/api/) and leverages the [AWS SDK for JavaScript in Node.js](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/index.html) as well as an [npm](https://www.npmjs.com/package/request) module: [Request - Simplified HTTP client](https://www.npmjs.com/package/request).
+Our AWS Lambda function is written in [Node.js](https://nodejs.org/dist/latest-v11.x/docs/api/) and leverages the [AWS SDK for JavaScript in Node.js](https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/index.html) as well as an [npm](https://www.npmjs.com/package/request) module: 
+
+[Request - Simplified HTTP client](https://www.npmjs.com/package/request).
 
 The beginning of our code will import these modules and define a few variables. Among these will be the endpoint for our Atlassian Connect App which we will pass as an [environment variable](https://docs.aws.amazon.com/lambda/latest/dg/env_variables.html), `BASE_URL`, in our Lambda function. 
 

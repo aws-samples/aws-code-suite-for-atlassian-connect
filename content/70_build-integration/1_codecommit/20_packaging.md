@@ -17,7 +17,7 @@ Earlier in this workshop, we made sure that our Cloud9 environment was setup to 
 First, let's begin by making sure we are working in the correct directory. Let's go to our [AWS Cloud9](https://aws.amazon.com/cloud9/) instance and from the terminal switch to this modules directory.
 
 ```bash
-cd ~/environment/aws-code-suite-for-atlassian-connect/content/70_build-integration/1_codecommit/
+cd ~/environment/aws-code-suite-for-atlassian-connect/lambda-functions/get-commit-id/
 ```
 
 {{% notice info %}}
@@ -33,10 +33,10 @@ This directory should contain the following contents:
 
 The file named `index.js` is our Lambda function. Next, we have `package.json` which is our manifest for external dependencies used in our function. In this case, we are using `require`. Lastly, have our SAM template as `template.yml`. We also have a hidden file named `.npmignore` which follows the same format as `.gitignore`. This file will allow us to exclude certain contents within the source code directory that we do not wish to package along with our function. For example, our SAM templates. While this does not negatively impact the functionality of our code, leaving it is not exactly a best practice. We want to keep things as clean and organized as possible. You can open these files in Cloud9 and examine them at your leisure.
 
-Before we start building, let's create an **S3 bucket** to store our artifacts. We will do this using the **AWS CLI** from our **CLoud9** instance by calling [s3api](https://docs.aws.amazon.com/cli/latest/reference/s3api/).
+Before we start building, let's create an **S3 bucket** to store our artifacts. We will do this using the **AWS CLI** from our **Cloud9** instance by calling [s3api](https://docs.aws.amazon.com/cli/latest/reference/s3api/).
 
 ```bash
-aws s3api create-bucket --bucket my-bucket  --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2 
+aws s3api create-bucket --bucket my-bucket  --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2
 ```
 
 {{% notice note %}}
@@ -91,10 +91,10 @@ Execute the following command to deploy the packaged template
 aws cloudformation deploy --template-file /home/ec2-user/environment/test-sam/package.yml --stack-name <YOUR STACK NAME>
 </pre>
 
-This process will create a `package.yml` template based on the contents defined in `template.yml` but will also include the artifacts of your Lambda function packaged to your S3 bucket. These will be defined in the `CodeUri` parameter as an S3 URL. Now, we are ready to deploy our package. We will run the following:
+This process will create a `package.yml` template based on the contents defined in `template.yml` but will also include the artifacts of your Lambda function packaged to your S3 bucket. These will be defined in the `CodeUri` parameter as an S3 URL. Now, we are ready to deploy our package. To do this, we will use [sam deploy](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-deploy.html). **sam deploy** is an alias for [aws cloudformation deploy](http://docs.aws.amazon.com/cli/latest/reference/cloudformation/deploy/index.html) and will deploy your AWS SAM application package through a specified AWS CloudFormation template. We will run the following:
 
 ```bash
-aws cloudformation deploy --template-file package.yml --stack-name <STACK_NAME> --capabilities CAPABILITY_IAM
+sam deploy --template-file package.yml --stack-name <STACK_NAME> --capabilities CAPABILITY_IAM
 ```
 
 {{% notice note %}}
