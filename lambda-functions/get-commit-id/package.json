@@ -1,5 +1,5 @@
 {
-  "name": "getcommitid",
+  "name": "get-commit-id",
   "version": "1.0.0",
   "description": "Sample Code for AWS CodeCommit API",
   "main": "index.js",
@@ -10,6 +10,6 @@
     "request": "^2.88.0",
     "time-stamp": "^2.2.0"
   },
-  "author": "Jay Yeras",
+  "author": "Jay Yeras <jayyeras@amazon.com>",
   "license": "Apache-2.0"
 }

@@ -1,0 +1,11 @@
+{
+  "name": "get-execution-id",
+  "version": "1.0.0",
+  "description": "Sample Code for AWS CodePipeline API",  
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jay Yeras <jayyeras@amazon.com>",
+  "license": "Apache-2.0"
+}
