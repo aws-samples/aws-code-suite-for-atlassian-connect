@@ -1,7 +1,7 @@
 +++
 title = "Introduction"
 chapter = false
-weight = 10
+weight = 1
 +++
 
 ## Store build information
