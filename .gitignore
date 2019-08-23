@@ -9,3 +9,4 @@ target/
 .settings/
 .original
 resources/
+.DS_Store
