@@ -1,0 +1,9 @@
+[submodule "themes/hugo-theme-learn"]
+	path = themes/hugo-theme-learn
+	url = git@github.com:matcornic/hugo-theme-learn.git
+[submodule "learn"]
+	path = themes/hugo-theme-learn
+	url = git@github.com:matcornic/hugo-theme-learn.git
+[submodule "3c45994"]
+	path = 3c45994
+	url = git@github.com:matcornic/hugo-theme-learn.git
